@@ -16,31 +16,29 @@ Intent schema:
 {
   "intents": [
     {
-      "intent": "Lunch"
+      "intent": "Wilkins"
     }
   ]
 }
 
 Utterances:
-Lunch What's for lunch?
-Lunch What is for lunch?
-Lunch What's on the menu for lunch?
+Wilkins What's for lunch
+Wilkins What is for lunch
+Wilkins What's on the menu for lunch
 */
 
 // Route the incoming request based on type (LaunchRequest, IntentRequest,
 // etc.) The JSON body of the request is provided in the event parameter.
 exports.handler = function (event, context) {
     try {
-        console.log("event.session.application.applicationId=" + event.session.application.applicationId);
+        //console.log("event.session.application.applicationId=" + event.session.application.applicationId);
 
         /**
          * Uncomment this if statement and populate with your skill's application ID to
          * prevent someone else from configuring a skill that sends requests to this function.
          */
-        if ((event.session.application.applicationId !==
-              "amzn1.echo-sdk-ams.app.7d0c7f7f-a79f-483b-ade0-7ff7898f442b") &&
-           (event.session.application.applicationId !==
-             "amzn1.echo-sdk-ams.app.98543c3d-d7fc-4404-a807-dabbad692a51")) {
+        if (event.session.application.applicationId !==
+              "amzn1.ask.skill.2cdd1a24-3def-4a58-a30e-f7acb3931511") {
              context.fail(`Invalid Application ID: ${event.session.application.applicationId}`);
         }
 
@@ -100,7 +98,7 @@ function onIntent(intentRequest, session, callback) {
         intentName = intentRequest.intent.name;
 
     // Dispatch to your skill's intent handlers
-    if ("Lunch" === intentName) {
+    if ("Wilkins" === intentName) {
       const lunch = require('./lib/intents/lunch').lunch;
       lunch(intent, session)
       .then(r => {
