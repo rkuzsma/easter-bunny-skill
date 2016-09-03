@@ -1,0 +1,39 @@
+{
+  "name": "sau-lunch-skill",
+  "version": "1.0.0",
+  "description": "Amazon Echo skill to tell you what's for lunch at SAU39",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec && lambda-local -c -l index.js -h handler -e event-samples/alexa-lunch.js",
+    "zip": "node-lambda package --environment prod",
+    "deploy": "node-lambda deploy --environment prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rkuzsma/sau-lunch-skill"
+  },
+  "keywords": [
+    "amazon",
+    "echo",
+    "alexa",
+    "skill",
+    "lambda",
+    "sau",
+    "lunch",
+    "menu"
+  ],
+  "author": "Rich Kuzsma",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "lambda-local": "0.0.10",
+    "mocha": "^2.5.3",
+    "node-lambda": "^0.8.5",
+    "prompt": "^1.0.0"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.3.17",
+    "bluebird": "^3.4.0",
+    "sau-lunch-calendar": "git+https://github.com/rkuzsma/sau-lunch-calendar.git"
+  }
+}
