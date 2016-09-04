@@ -16,10 +16,18 @@ Intent schema:
 {
   "intents": [
     {
-      "intent": "Wilkins"
+      "intent": "Wilkins",
+      "slots": [
+        {
+          "name": "dateQuery",
+          "type": "AMAZON.DATE"
+        }
+      ]
+    ]
     }
   ]
 }
+
 
 Utterances:
 Wilkins What's for lunch
