@@ -23,16 +23,18 @@ Intent schema:
           "type": "AMAZON.DATE"
         }
       ]
-    ]
     }
   ]
 }
 
 
 Utterances:
-Wilkins What's for lunch
-Wilkins What is for lunch
-Wilkins What's on the menu for lunch
+Wilkins What's for lunch {dateQuery}
+Wilkins What's for lunch on {dateQuery}
+Wilkins What is for lunch {dateQuery}
+Wilkins What is for lunch on {dateQuery}
+Wilkins What is on the menu {dateQuery}
+Wilkins What's on the menu {dateQuery}
 */
 
 // Route the incoming request based on type (LaunchRequest, IntentRequest,
