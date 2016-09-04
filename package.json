@@ -34,6 +34,7 @@
   "dependencies": {
     "aws-sdk": "^2.3.17",
     "bluebird": "^3.4.0",
+    "dateformat": "^1.0.12",
     "sau-lunch-calendar": "git+https://github.com/rkuzsma/sau-lunch-calendar.git"
   }
 }

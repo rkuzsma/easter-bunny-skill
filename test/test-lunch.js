@@ -16,7 +16,7 @@ describe('sau lunch skill', function() {
     let session = {};
     return lunch(intent, session)
       .then(response => {
-        response.speechOutput.should.equal("Lunch today is Macaroni & Cheese, Carrot Sticks, Celery Sticks, Pears in Light Syrup, Variety of Milk, ");
+        response.speechOutput.should.equal("Lunch on Thursday, September 29th is Macaroni & Cheese, Carrot Sticks, Celery Sticks, Pears in Light Syrup, Variety of Milk, ");
         done();
       });
   });
